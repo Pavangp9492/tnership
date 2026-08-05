@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.ramaiahacademy.com/">
+        <!-- name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+        <!-- email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <!-- phone -->
+        <label for="phone">Phone number:</label>
+        <input type="tel" placeholder="enter number" id="phone" name="phone" maxlength="10" required>
+        <br><br>
+        <!-- password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" maxlength="8" required>
+        <br><br>
+        <!-- radio button -->
+         <p>experience level</p>
+        <input type="radio" id="beginner" name="level" value="beginner">
+        <label for="beginner">Beginner</label><br>
+        <input type="radio" id="intermediate" name="level" value="intermediate">
+        <label for="intermediate">Intermediate</label><br>
+        <p>technology</p>
+        <input type="checkbox" id="html" name="tech" value="html">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="tech" value="css">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="javascript" name="tech" value="javascript">
+        <label for="javascript">JavaScript</label><br>
+          <!-- country -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option valve="choose your country">Choose your country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            </select>
+            <!-- textarea -->
+             <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
+             <!-- date picker -->
+                <label for="date">Select a date:</label>
+                <input type="date" id="date" name="date">   
+
+                <!-- file upload -->
+                <label for="file">Upload a file:</label>
+                <input type="file" id="file" name="file" accept=".jpg">
+                <br><br>    
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+       
+        
+    </form>
+</body>
+</html>
