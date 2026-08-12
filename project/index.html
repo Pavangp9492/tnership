@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
  
     <!-- SEO Meta Tags -->
     <title>Pavan Kumar G P| Web Developer Portfolio</title>
@@ -25,55 +26,115 @@
  
 </head>
 <body>
-    <nav>
-        <a href="">about</a>`
-        <a href="">skills</a>
-        <a href="">projects</a>  
-        <a href="">contact</a>
-    </nav>
-    <header>
-        <h1>Hi, I'm Pavan Kumar G P</h1>
-        <p>I'm a web developer passionate about creating interactive and user-friendly websites.</p>
-        <a href="">Hire Me</a>
+    <header class="site-header">
+         <nav class="navbar">
+            <div class="logo">GP</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" title="toggle dark" aria-label="toggle darkmode">   
+            </button>
+            <button class="menu-toggle" title="toggle menu" aria-label="toggle menu" area-expanded="false">
+                ≡
+            </button>
+        </nav>
     </header>
-    <section id="about">
+    <main>
+        <section class="hero-section" id="hero">
+           <h1>Hi, I'm Pavan Kumar G P</h1>
+           <p class="tagline">I'm a web developer passionate about creating interactive and user-friendly websites.</p>
+           <div class="hero-buttons">
+               <a href="#projects" class="btn btn-primary">view my projects</a>
+                <a href="#contact" class="btn btn-secondary">contact me</a>
+           </div>
+        </section>
+    
+    <section id="about" class="about-section">
         <h2>About me</h2>
-        <img src="pavan pic.jpg" alt="profil pic" width="200px" height="200px">
-        <p>
-            I'm a web developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy building responsive and visually appealing websites that provide a seamless user experience. My goal is to continuously improve my skills and stay updated with the latest web development trends.
-        </p>
+        <div class="about-content">
+            <figure>
+                <img src="pavan pic.jpg" alt="profil pic" width="200px" height="200px">
+                <figcaption>Web Developer</figcaption>
+            </figure>
+        </div>
+        <div class="about-text">
+            <p>Hello! I'm Pavan Kumar G P, a passionate web developer with a strong interest in creating dynamic and responsive web applications. I have experience working with various web technologies and enjoy learning new skills to enhance my development capabilities.</p  >
+        </div>
+        
     </section>
-    <section id="skills">
-        <h2> Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Responsive Design</li>
-            <li>Version Control (Git)</li>
-        </ul>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class ="project-card">
-            <h3>Project 1</h3>
-            <p>A brief description of the project and its features.</p>
-            <a href="#">View Project</a>
 
+    <section id="skills" class="skills-section">
+        <h2> Skills</h2>
+        <div class="skills-grid">
+           <div class="skill-item" data-level="90">HTML</div>
+           <div class="skill-item" data-level="85">CSS</div>
+           <div class="skill-item" data-level="80">JavaScript</div>
+           <div class="skill-item" data-level="75">React</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+
+        <div class ="project-grid">
+            <article class="project-card" data-id="1"  data-category="web development" >
+            <img src="the-weather-project_19067.webp" alt="wheather app" width="200px" height="200px">
+            <h3>wheather app</h3>
+            <p>A brief description of the project and its features.</p>
+            <div class = "project -tags">
+                <span class="tag">react</span>
+                <span class="tag">API</span>
+            </div>
+            <a href="#" class="btn">live demo</a>
+            <a href="#" class="btn">Github</a>
+            </article>
+
+            <article class="project-card" data-id="2"  data-category="web development" >
+            <img src="farmer.app.jpg" alt="farmer App" width="200px" height="200px">
+            <h3>Farmer App</h3>
+            <p>A brief description of the project and its features.</p>
+            <div class = "project -tags">
+                <span class="tag">HTML</span>
+                <span class="tag">API</span>
+            </div>
+            <a href="#" class="btn">live demo</a>
+            <a href="#" class="btn">Github</a>
+            </article>
+
+            <article class="project-card" data-id="3"  data-category="web development" >
+            <img src="game.app.jpg" alt="gaming App" width="200px" height="200px">
+            <h3>Gaming App</h3>
+            <p>A brief description of the project and its features.</p>
+            <div class = "project -tags">
+                <span class="tag">Html</span>
+                <span class="tag">css</span>
+            </div>
+            <a href="#" class="btn">live demo</a>
+            <a href="#" class="btn">Github</a>
+            </article>
         </div>
     </section>
 
 
-    <section id="contact">
+    <section id="contact" class="contact-section">
         <h2>Contact me</h2>
         <p>Feel free to reach out to me!</p>
         <form action="https://www.ramaiahacademy.com/">
-            <label for="name">Name:</label><br>
+
+            <div class="form-group">
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <br><br>
+            </div>
+
+            <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
             <label for="subject">subject:</label>
             <select id="subject" name="subject">
                 <option value="">Choose your subject</option>
@@ -82,16 +143,29 @@
                 <option value="javascript">JavaScript</option>
                 <option value="other">other</option>
             </select>
-            <br><br>
+            </div>
+
+            <div class="form-group">
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..." required></textarea>
                 <br><br>
                 <button type="submit">Send msg</button>
+            </div>
+
         </form>
         <p>Email: <a href="mailto:gppavan82@gmail.com">gppavan82@gmail.com</a></p>
     </section>
-    <footer>
+
+
+    </main>
+
+
+    <footer class="site-footer">
         <p>&copy; 2024 Pavan Kumar G P. All rights reserved.</p>
+        <nav aria-label="social">
+            <a href="https://linkedin.com/in/pavankumargp" target="_blank">LinkedIn</a>
+            <a href="https://github.com/pavankumargp" target="_blank">GitHub</a>
+        </nav>
     </footer>
 </body>
 </html>
